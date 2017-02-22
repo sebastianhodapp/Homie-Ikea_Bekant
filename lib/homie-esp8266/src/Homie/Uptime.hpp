@@ -1,0 +1,16 @@
+#pragma once
+
+#include "Arduino.h"
+
+namespace HomieInternals {
+class Uptime {
+ public:
+  Uptime();
+  void update();
+  uint64_t getSeconds() const;
+
+ private:
+  uint64_t _seconds;
+  uint64_t _lastTick;
+};
+}  // namespace HomieInternals
